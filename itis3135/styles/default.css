@@ -19,7 +19,7 @@ img{
     
 }
 figure{
-    text-align: center;
+    
 }
 figcaption{
     text-align: center;
@@ -28,6 +28,6 @@ figcaption{
 h2{
     text-align: center;
 }
-ul, li{
+ul{
     text-align: left;
 }
