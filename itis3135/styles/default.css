@@ -14,3 +14,20 @@ a:hover{
 a{
     color: black;
 }
+img{
+    width: 100%;
+    
+}
+figure{
+    text-align: center;
+}
+figcaption{
+    text-align: center;
+    font-style: italic;
+}
+h2{
+    text-align: center;
+}
+ul, li{
+    text-align: left;
+}
