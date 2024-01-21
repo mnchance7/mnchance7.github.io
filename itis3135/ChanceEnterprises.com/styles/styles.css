@@ -3,3 +3,6 @@ body{
     font-family: cursive;
     text-align: left;
 }
+a:hover{
+    color: white;
+}
