@@ -31,3 +31,21 @@ h2{
 ul{
     text-align: left;
 }
+table{
+    border: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid ;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #F0EAD6;
+}
