@@ -49,3 +49,6 @@ th {
 tr:nth-child(even) {
     background-color: #F0EAD6;
 }
+form{
+    background-color: navy;
+}
