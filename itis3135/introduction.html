@@ -7,22 +7,7 @@
     <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-    <header>
-        <h1>Malcolm Chance's Manic Caterpillar 🐛 ITSC 3135</h1>
-        <nav>
-            <a href="./">Home</a>
-            ||
-            <a href="introduction.html">Introduction</a>
-            ||
-            <a href="contract.html">Contract</a>
-            ||
-            <a href="tables.html">Tables</a>
-            ||
-            <a href="form.html">Form</a>
-            ||
-            <a href="website_evaluations.html">Website Evaluations</a>
-            
-        </nav>
+    <div data-include="components/header.html"></div>
     </header>
     <main>
         <h2>Introduction</h2>
@@ -60,34 +45,7 @@
         </ul>
     </main>
     
-    <footer>
-        <nav>
-            <a href="https://webpages.charlotte.edu/mchance7/">Charlotte.edu</a>
-            ||
-            <a href="https://github.com/mnchance7/mnchance7.github.io">Github</a>
-            ||
-            <a href="https://mnchance7.github.io/itis3135">Github.io</a>
-            ||
-            <a href="https://www.freecodecamp.org/mchance7">freecodecamp</a>
-            ||
-            <a href="https://www.codecademy.com/profiles/mchance7">codeacademy</a>
-            ||
-            <a href="https://www.linkedin.com/in/malcolm-chance-6710a6251/">linkedin</a>
-
-        </nav>
-        <p>Page Buit by <a href="maniccaterpillarincorporated.com/">maniccaterpillarincorporated </a>&copy;2024</p>
-        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-            <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-           </a>
-           <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-             </a>
-           
-           <script>
-              document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-                   document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-           </script>
-           
-    </footer>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
 </body>
 </html>
