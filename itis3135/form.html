@@ -11,68 +11,50 @@
     <main>
         <h2>Form</h2>
         <form>
-        <h3>What other services should we provide</h3>
-        <div>
-            <label id="name-label">
-              Name
-              <input id="name" type="text" 
-              required placeholder="Your Name"/>
-              </label>
-          </div>
-          <div>
-              <label id="email-label">
-              Email
-              <input type="email" id="email" type="email" required placeholder="123email@gmail.com"/>
-              </label>
-              </div>
+            <h3>What other services should we provide</h3>
             <div>
-            <label id="number-label">
-            Number
-                  <input id="number" type="tel" min="1" max="20" placeholder="123-456-7890"/>
-        </label>
-        <div>
-            <label>
-              How do you feel about our customer service 
-              </label>
-              <div>
-            <label><input type="radio" name="Steam"value="yes"/>Good</label>
+                <label for="name">Name</label>
+                <input id="name" type="text" required placeholder="Your Name"/>
             </div>
-            <label><input type="radio" name="Steam"value="no"/>Bad</label>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="123email@gmail.com"/>
             </div>
-            <label>
+            <div>
+                <label for="number">Number</label>
+                <input id="number" type="tel" placeholder="123-456-7890"/>
+            </div>
+            <div>
+                <label>How do you feel about our customer service</label>
                 <div>
-                    <label>
-                      Do you have a favorite item 
-                      </label>
-                      <div>
-                    <label><input type="checkbox" name="Steam"value="yes"/>YES</label>
-                    </div>
-                    <label><input type="checkbox" name="Steam"value="no"/>DEFINATELY YES</label>
-                    </div>
-                    <label>
-                        <div>
-                            <label id="select">
-                              Who do you think our wourse employee is
-                             </label>
-                             <select id="dropdown">
-                               <option>Drake Peck</option>
-                               <option>Josh Peck</option>
-                               <option>Madara Uchiha</option>
-                               <option>Spongebob Squarepants</option>
-                               <option>Joey Wheeler</option>
-                               <option>Ussop</option>
-                               <option>Bob Jenkins</option>
-                               </select>
-                               </div>
-                               <input type="reset" value="Reset">
-                               <div>
-                               <button type="submit" id="submit">
-                                Submit
-                                </button>
-                                </div>
-                            </form>
-        
-
+                    <label><input type="radio" name="steam" value="yes"/>Good</label>
+                    <label><input type="radio" name="steam" value="no"/>Bad</label>
+                </div>
+            </div>
+            <div>
+                <label>Do you have a favorite item</label>
+                <div>
+                    <label><input type="checkbox" name="steam" value="yes"/>YES</label>
+                    <label><input type="checkbox" name="steam" value="no"/>DEFINATELY YES</label>
+                </div>
+            </div>
+            <div>
+                <label for="select">Who do you think our worst employee is</label>
+                <select id="dropdown">
+                    <option>Drake Peck</option>
+                    <option>Josh Peck</option>
+                    <option>Madara Uchiha</option>
+                    <option>Spongebob Squarepants</option>
+                    <option>Joey Wheeler</option>
+                    <option>Ussop</option>
+                    <option>Bob Jenkins</option>
+                </select>
+            </div>
+            <input type="reset" value="Reset">
+            <div>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>

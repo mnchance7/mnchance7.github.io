@@ -52,6 +52,13 @@ tr:nth-child(even) {
 form{
     background-color: navy;
     color: white;
+    padding: 20px; 
+    border-radius: 10px;
+
+}
+button, input{
+    background-color: balck;
+    color: coral;
 }
 a{
     font-family: Arial;
