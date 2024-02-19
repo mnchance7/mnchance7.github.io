@@ -2,6 +2,11 @@ body{
     background-color: #98FB98;
     font-family: cursive;
     text-align: center;
+    margin: 0px auto;
+
+}
+main{
+    margin: 0px auto;
 }
 header{
     padding-top: 10%;
@@ -15,7 +20,8 @@ a{
     color: black;
 }
 img{
-    width: 75%;
+    width: 50%;
+    height: 50%
     
 }
 figure{
@@ -63,4 +69,21 @@ button, input{
 a{
     font-family: Arial;
     text-decoration: none;
+}
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    body{
+        font-size: 150%;
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    body{
+        font-size: 150%;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    body{
+        font-size: 150%;
+    }
 }
