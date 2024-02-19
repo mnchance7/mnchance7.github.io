@@ -83,12 +83,12 @@ a{
 /* Rule Overrides For Tablet Devices */
 @media screen and ( min-width: 601px ) and ( max-width: 980px )  {
     body{
-        font-size: 150%;
+        font-size: 125%;
     }
 }
 /* Rule Overrides For Mobile Devices */
 @media screen and ( min-width: 370px ) and ( max-width: 600px ) {
     body{
-        font-size: 150%;
+        font-size: 100%;
     }
 }
