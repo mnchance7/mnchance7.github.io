@@ -70,6 +70,7 @@ form{
 button, input{
     background-color: black;
     color: coral;
+    
 }
 a{
     font-family: Arial;
@@ -91,4 +92,7 @@ a{
     body{
         font-size: 100%;
     }
+}
+nav{
+    padding-bottom: 10px;
 }
