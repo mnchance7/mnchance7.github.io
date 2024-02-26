@@ -11,6 +11,7 @@
         <a href="https://www.codecademy.com/profiles/mchance7">codeacademy</a>
         ||
         <a href="https://www.linkedin.com/in/malcolm-chance-6710a6251/">linkedin</a>
+        
 
     </nav>
     <p>Page Buit by <a href="chanceinnovationdesigns.com/">chanceinnovationdesigns</a>, <a href ="https://www.freecodecamp.org/certification/mchance7/responsive-web-design">Certified in RWD</a> &copy;2024</p>
@@ -21,10 +22,12 @@
         <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
          </a>
          <p>Grill in the depth</p>
-       
+         <button type="button" onclick="document.querySelectorAll('link[rel=stylesheet]').forEach(e => e.disabled = !e.disabled);">Toggle CSS</button>
+
        <script>
           document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
                document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+               document.getelementbyTagName("link").setAttribute("href", "");
        </script>
        
 </footer>
