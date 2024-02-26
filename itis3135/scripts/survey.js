@@ -16,6 +16,20 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
     const anythingElse = document.getElementById('anythingElse').value;
     
     // Assume courses are captured and processed into an array or similar structure
+    function addCourse() {
+        const coursesDiv = document.getElementById('courses');
+        const newCourseInput = document.createElement('input');
+        newCourseInput.type = 'text';
+        newCourseInput.className = 'course';
+        coursesDiv.appendChild(newCourseInput);
+    }
+    const reader = new FileReader();
+    reader.onload = function(e) {
+    personalizedContent = personalizedContent.replace('${image.src}', e.target.result);
+    document.querySelector('main').innerHTML = personalizedContent;
+    };
+    reader.readAsDataURL(image);
+    
 
     // Generate the personalized webpage content
     const personalizedContent = `
@@ -44,5 +58,6 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
 
     // Display the personalized content
     // This assumes you have a specific element to replace or insert this content into
-    document.querySelector('where-to-put-the-content').innerHTML = personalizedContent;
+    document.querySelector('main').innerHTML = personalizedContent;
+
 });
