@@ -1,92 +1,50 @@
-function addCourse() {
-    const coursesDiv = document.getElementById('courses');
-    const courseInput = document.createElement('input');
-    courseInput.type = 'text';
-    courseInput.classList.add('course');
-    courseInput.required = true;
+// Example JavaScript Code
+document.getElementById('surveyForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting traditionally
 
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.type = 'button';
-    deleteButton.onclick = function() {
-        coursesDiv.removeChild(courseInput);
-        coursesDiv.removeChild(deleteButton);
-    };
+    // Capture form data
+    const name = document.getElementById('name').value;
+    const mascot = document.getElementById('mascot').value;
+    const image = document.getElementById('image').files[0]; // Assuming image is uploaded and saved separately
+    const imageCaption = document.getElementById('imageCaption').value;
+    const personalBackground = document.getElementById('personalBackground').value;
+    const professionalBackground = document.getElementById('professionalBackground').value;
+    const academicBackground = document.getElementById('academicBackground').value;
+    const webDevelopmentBackground = document.getElementById('webDevelopmentBackground').value;
+    const primaryComputerPlatform = document.getElementById('primaryComputerPlatform').value;
+    const funnyThing = document.getElementById('funnyThing').value;
+    const anythingElse = document.getElementById('anythingElse').value;
+    
+    // Assume courses are captured and processed into an array or similar structure
 
-    coursesDiv.appendChild(courseInput);
-    coursesDiv.appendChild(deleteButton);
-}
+    // Generate the personalized webpage content
+    const personalizedContent = `
+        <main>
+            <h2>Introduction</h2>
+            <figure>
+                <img src="${image.src}" alt="${image.alt}">
+                <figcaption>${imageCaption}</figcaption>
+            </figure>
+            <ul>
+                <li><b>Personal Background: </b>${personalBackground}</li>
+                <li><b>Professional Background: </b>${professionalBackground}</li>
+                <li><b>Academic Background: </b>${academicBackground}</li>
+                <li><b>Background in Web Development: </b>${webDevelopmentBackground}</li>
+                <li><b>Primary Computer Platform: </b>${primaryComputerPlatform}</li>
+                <li><b>Courses currently taking:</b>
+                    <ul>
+                        <!-- Dynamically insert courses here -->
+                    </ul>
+                </li>
+                <li><b>Funny thing? </b>${funnyThing}</li>
+                <li><b>Anything else? </b>${anythingElse}</li>
+            </ul>
+        </main>
+    `;
 
-window.onload = function() {
-    const form = document.getElementById('surveyForm');
-    form.onsubmit = function(event) {
-        event.preventDefault();
-
-        // Gather form data
-        const name = document.getElementById('name').value;
-        const mascot = document.getElementById('mascot').value;
-        // Retrieve image file
-        const image = document.getElementById('image').files[0];
-        const imageCaption = document.getElementById('imageCaption').value;
-        const personalBackground = document.getElementById('personalBackground').value;
-        const professionalBackground = document.getElementById('professionalBackground').value;
-        const academicBackground = document.getElementById('academicBackground').value;
-        const webDevelopmentBackground = document.getElementById('webDevelopmentBackground').value;
-        const primaryComputerPlatform = document.getElementById('primaryComputerPlatform').value;
-        const courses = Array.from(document.getElementsByClassName('course')).map(input => input.value);
-        const funnyThing = document.getElementById('funnyThing').value;
-        const anythingElse = document.getElementById('anythingElse').value;
-        
-        // Create the HTML content
-        const main = document.createElement('main');
-        const h2 = document.createElement('h2');
-        h2.textContent = 'Introduction';
-        main.appendChild(h2);
-
-        const figure = document.createElement('figure');
-        const img = document.createElement('img');
-        img.src = URL.createObjectURL(image);
-        img.alt = 'Image';
-        figure.appendChild(img);
-        const figcaption = document.createElement('figcaption');
-        figcaption.textContent = imageCaption;
-        figure.appendChild(figcaption);
-        main.appendChild(figure);
-
-        const ul = document.createElement('ul');
-        const li1 = document.createElement('li');
-        li1.innerHTML = `<b>Personal Background:</b> ${personalBackground}`;
-        ul.appendChild(li1);
-        const li2 = document.createElement('li');
-        li2.innerHTML = `<b>Professional Background:</b> ${professionalBackground}`;
-        ul.appendChild(li2);
-        const li3 = document.createElement('li');
-        li3.innerHTML = `<b>Academic Background:</b> ${academicBackground}`;
-        ul.appendChild(li3);
-        const li4 = document.createElement('li');
-        li4.innerHTML = `<b>Background in this Subject:</b> ${webDevelopmentBackground}`;
-        ul.appendChild(li4);
-        const li5 = document.createElement('li');
-        li5.innerHTML = `<b>Primary Computer Platform:</b> ${primaryComputerPlatform}`;
-        ul.appendChild(li5);
-        const li6 = document.createElement('li');
-        li6.innerHTML = `<b>Course I am taking and why:</b><ul>${courses.map(course => `<li>${course}</li>`).join('')}</ul>`;
-        ul.appendChild(li6);
-        const li7 = document.createElement('li');
-        li7.innerHTML = `<b>Funny/Interesting Item to Remember me by:</b> ${funnyThing}`;
-        ul.appendChild(li7);
-        const li8 = document.createElement('li');
-        li8.innerHTML = `<b>I'd Also Like to Share:</b><ul>${anythingElse.split('\n').map(item => `<li>${item}</li>`).join('')}</ul>`;
-        ul.appendChild(li8);
-        main.appendChild(ul);
-
-        // Replace form with generated content
-        const formContainer = document.getElementById('surveyForm').parentElement;
-        formContainer.innerHTML = '';
-        formContainer.appendChild(main);
-    };
-};
-
-  
+    // Display the personalized content
+    // This assumes you have a specific element to replace or insert this content into
+    document.querySelector('where-to-put-the-content').innerHTML = personalizedContent;
+});
   
   
