@@ -33,3 +33,6 @@ a{
     font-family: Arial;
     text-decoration: none;
 }
+ul {
+    list-style-type: square;
+}
