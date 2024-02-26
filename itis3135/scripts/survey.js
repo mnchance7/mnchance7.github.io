@@ -46,5 +46,3 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
     // This assumes you have a specific element to replace or insert this content into
     document.querySelector('where-to-put-the-content').innerHTML = personalizedContent;
 });
-  
-  
