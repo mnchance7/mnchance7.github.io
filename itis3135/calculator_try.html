@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malcolm Chance's Manic Caterpillar 🐛 ITSC 3135 🐛 Calculator</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" href="images/icons8-star-48.png">
+
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Calculator</h2>
+        <div id="calculator">
+            <div id="display">0</div>
+            <button onclick="showNum(1)">1</button>
+            <button onclick="showNum(2)">2</button>
+            <button onclick="showNum(3)">3</button>
+            <button onclick="showNum(4)">4</button>
+            <button onclick="showNum(5)">5</button>
+            <button onclick="showNum(6)">6</button>
+            <button onclick="showNum(7)">7</button>
+            <button onclick="showNum(8)">8</button>
+            <button onclick="showNum(9)">9</button>
+            <button onclick="showNum(0)">0</button>
+            <button onclick="addOperation('+')">+</button>
+            <button onclick="addOperation('-')">-</button>
+            <button onclick="addOperation('*')">*</button>
+            <button onclick="addOperation('/')">/</button>
+
+            <button onclick="calculate()">=</button>
+        </div>
+    </main>
+    
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+</body>
+</html>
