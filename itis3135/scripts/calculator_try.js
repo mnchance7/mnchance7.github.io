@@ -15,7 +15,13 @@ function calculate() {
         currentInput = "";
     }
 }
+
 function addOperation(operation) {
     currentInput += operation;
     document.getElementById('display').innerText = currentInput;
+}
+
+function clearDisplay() {
+    currentInput = "";
+    document.getElementById('display').innerText = "0";
 }
