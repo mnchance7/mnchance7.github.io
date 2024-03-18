@@ -68,5 +68,8 @@ function getCurrentDateTime() {
         alert("No");
       }
   }
+  function whatIsThisButton(){
+    alert("It tells you a color and your color is blue");
+  }
   
 
