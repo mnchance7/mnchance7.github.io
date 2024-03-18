@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-Page in Single HTML</title>
+    <style>
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('about')">About</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        <li><a href="#" onclick="showPage('ai')">Ai Prompts</a></li>
+    </ul>
+</nav>
+
+<div id="home" class="page active">
+    <h1>Home Page</h1>
+    <p>Welcome to my website!</p>
+</div>
+
+<div id="about" class="page">
+    <h1>About Us</h1>
+    <p>Learn more about our mission and values.</p>
+</div>
+
+<div id="contact" class="page">
+    <h1>Contact Us</h1>
+    <p>Get in touch with us through the following means.</p>
+</div>
+<div id="ai" class="page">
+    <h1>Ai Promts</h1>
+    <p>create and html website that contains multiple pages within a single html document </p>
+    <p>Create and image of a super computer</p>
+    <p>Create and image of a super computer</p>
+</div>
+
+<script>
+    function showPage(pageId) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.page');
+        for (const page of pages) {
+            page.classList.remove('active');
+        }
+
+        // Show the selected page
+        const activePage = document.getElementById(pageId);
+        activePage.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
