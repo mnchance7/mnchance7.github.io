@@ -226,11 +226,14 @@ main{
          <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/mchance7/itis3135/">
             <img style="border:0;width:88px;height:31px" src="https://webpages.charlotte.edu/mchance7/itis3135/images/button_validation_wcag.png" alt="Valid HTML!">
          </a>
+         <script>
+                document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+                document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+                document.getelementbyTagName("link").setAttribute("href", "");
+         </script>
 </footer>
 <script>
-    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    document.getelementbyTagName("link").setAttribute("href", "");
+    
     function showPage(pageId) {
         // Hide all pages
         const pages = document.querySelectorAll('.page');
