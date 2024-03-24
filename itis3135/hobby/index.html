@@ -33,41 +33,72 @@
     </style>
 </head>
 <body>
-
+<h1>Computer Building Hobby Site</h1>
 <nav>
     <ul>
         <li><a href="#" onclick="showPage('home')">Home</a></li>
+        🖥️
         <li><a href="#" onclick="showPage('who')">Who</a></li>
+        🖥️
         <li><a href="#" onclick="showPage('when')">When</a></li>
+        🖥️
         <li><a href="#" onclick="showPage('where')">Where</a></li>
+        🖥️
         <li><a href="#" onclick="showPage('how')">How</a></li>
+        🖥️
         <li><a href="#" onclick="showPage('why')">Why</a></li>
+        🖥️
         <li><a href="#" onclick="showPage('ai')">Ai Prompts</a></li>
     </ul>
 </nav>
 
 <div id="home" class="page active">
-    <h1>Home Page</h1>
+    <h2>What is building a computer</h2>
     <p>Welcome to my website!</p>
 </div>
 
-<div id="about" class="page">
-    <h1>About Us</h1>
+<div id="who" class="page">
+    <h2>Who do I build Computers for?</h2>
     <p>Learn more about our mission and values.</p>
 </div>
 
-<div id="contact" class="page">
-    <h1>Contact Us</h1>
+<div id="when" class="page">
+    <h2>When do I build computers</h2>
+    <p>Get in touch with us through the following means.</p>
+</div>
+<div id="where" class="page">
+    <h2>Where do I build computers</h2>
+    <p>Get in touch with us through the following means.</p>
+</div>
+<div id="how" class="page">
+    <h2>How do you learn to build computers</h2>
+    <p>Get in touch with us through the following means.</p>
+</div>
+<div id="why" class="page">
+    <h2>Why do I build computers</h2>
     <p>Get in touch with us through the following means.</p>
 </div>
 <div id="ai" class="page">
-    <h1>Ai Promts</h1>
+    <h2>Ai Promts</h2>
     <p>create and html website that contains multiple pages within a single html document </p>
     <p>Create and image of a super computer</p>
     <p>Create and image of a super computer</p>
 </div>
-
+<footer>
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img style="border:0;width:88px;height:31px" src="https://webpages.charlotte.edu/mchance7/itis3135/images/html_validation.png" alt="Valid HTML!">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <img style="border:0;width:88px;height:31px" src="https://webpages.charlotte.edu/mchance7/itis3135/images/css_validation.png" alt="Valid CSS!">
+         </a>
+         <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/mchance7/itis3135/">
+            <img style="border:0;width:88px;height:31px" src="https://webpages.charlotte.edu/mchance7/itis3135/images/button_validation_wcag.png" alt="Valid HTML!">
+         </a>
+</footer>
 <script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    document.getelementbyTagName("link").setAttribute("href", "");
     function showPage(pageId) {
         // Hide all pages
         const pages = document.querySelectorAll('.page');
