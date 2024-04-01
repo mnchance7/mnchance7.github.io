@@ -2,24 +2,23 @@
 // Define the addCourse function
 function addCourse() {
     const coursesContainer = document.getElementById('courses');
-    const newCourseInput = document.createElement('input');
-    newCourseInput.type = 'text';
-    newCourseInput.className = 'course';
-    coursesContainer.appendChild(newCourseInput);
-    coursesContainer.appendChild(document.createElement('br'));
+    // Check if the last input is not empty or if there are no inputs yet
+    const lastInput = coursesContainer.querySelector('input:last-of-type');
+    if (!lastInput || lastInput.value.trim() !== '') {
+        const newCourseInput = document.createElement('input');
+        newCourseInput.type = 'text';
+        newCourseInput.className = 'course';
+        coursesContainer.appendChild(newCourseInput);
+        coursesContainer.appendChild(document.createElement('br'));
+        
+        // Optionally, you can focus on the new input for better UX
+        newCourseInput.focus();
 
-    // Clear the input field after adding the course
-    newCourseInput.addEventListener('blur', function() {
-        if (this.value.trim() !== '') {
-            const nextInput = document.createElement('input');
-            nextInput.type = 'text';
-            nextInput.className = 'course';
-            nextInput.required = true;
-            coursesContainer.appendChild(nextInput);
-            coursesContainer.appendChild(document.createElement('br'));
-            this.disabled = true; // disable current input after adding the course
+        // Disable the previous input if necessary
+        if (lastInput) {
+            lastInput.disabled = true;
         }
-    });
+    }
 }
 
 // Add event listener for form submission
