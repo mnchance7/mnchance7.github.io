@@ -5,12 +5,11 @@ function addCourse() {
     const newCourseInput = document.createElement('input');
     newCourseInput.type = 'text';
     newCourseInput.className = 'course';
-    newCourseInput.required = true;
     coursesContainer.appendChild(newCourseInput);
     coursesContainer.appendChild(document.createElement('br'));
 
     // Clear the input field after adding the course
-    newCourseInput.addEventListener('change', function() {
+    newCourseInput.addEventListener('blur', function() {
         if (this.value.trim() !== '') {
             const nextInput = document.createElement('input');
             nextInput.type = 'text';
