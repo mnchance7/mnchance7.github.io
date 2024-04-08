@@ -10,6 +10,8 @@
 </head>
 <body>
     <div data-include="components/header.html"></div>
+    <nav id="main-menu-container"></nav>
+    <nav id="sub-menu-container"></nav>
     <main>
         <h2>About</h2>
         <p>Our bussiness is one of the leading sellers of Deep Sea Grilling equipment. Our main goal is to make the best products possible so that our
@@ -19,10 +21,15 @@
 
         </p>
         <p>Sloggan: Grill in the depth</p>
-        
+        <button onclick="validateHTML()">Validate HTML</button>
+        <button onclick="validateCSS()">Validate CSS</button>
+        <button onclick="validateAIM()">Validate AIM</button>
+        <button type="button" id="toggleCssBtn">Toggle CSS</button>
     </main>
-    
+    <nav id="footer-links-container"></nav>
     <div data-include="components/footer.html"></div>
+    <script src="scripts/menuscipt.js"></script>
     <script src="scripts/HTMLInclude.js"></script>
+    
 </body>
 </html>
