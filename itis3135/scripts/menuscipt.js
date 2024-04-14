@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
+    loadMenu("components/mainmenu.json", "main-menu-container", "menuItems"); // Specify "menuItems" for the main menu
     // Load submenu directly since its JSON structure is an array of objects
     loadMenu("components/submenu.json", "sub-menu-container", null);  document.getElementById("toggleCssBtn").addEventListener("click", toggleStylesheets);
 
 
     // Load main menu and footer links by specifying their respective keys since their JSON structure has nested objects
-    loadMenu("components/mainmenu.json", "main-menu-container", "menuItems"); // Specify "menuItems" for the main menu
+
     loadMenu("components/footer.json", "footer-links-container", "footerLinks"); // Specify "footerLinks" for footer links
 });
 
