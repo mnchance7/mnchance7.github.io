@@ -13,7 +13,8 @@
       {"name": "Calculator", "url": "calculator_try.html"},
       {"name": "Calculator FCC", "url": "calculator_fcc.html"},
       {"name": "Arrays", "url": "arrays.html"},
-      {"name": "Drawing", "url": "drawing.html"}
+      {"name": "Drawing", "url": "drawing.html"},
+      {"name": "Slideshow", "url": "slideshow.html"}
     ]
   }
   
