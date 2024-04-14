@@ -6,29 +6,47 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Load main menu and footer links by specifying their respective keys since their JSON structure has nested objects
 
-    loadMenu("components/footer.json", "footer-links-container", "footerLinks"); // Specify "footerLinks" for footer links
+    loadMenu("components/footer.json", "footer-links-container", "footerLinks", true); // Specify "footerLinks" for footer links
 });
 
 // Revised loadMenu function to accommodate optional key for nested objects
-function loadMenu(jsonFile, containerId, key) {
+function loadMenu(jsonFile, containerId, key, isFooter = false) {
     fetch(jsonFile)
         .then(response => response.json())
         .then(data => {
             const menuContainer = document.getElementById(containerId);
-            // Use the key if provided to access nested objects, otherwise use data directly
             const items = key ? data[key] : data; 
             items.forEach(item => {
                 const menuItem = document.createElement("a");
                 menuItem.textContent = item.name;
                 menuItem.href = item.url;
                 menuContainer.appendChild(menuItem);
-                // Append separator except after the last item
-                if(items.indexOf(item) !== items.length - 1) {
+                if (items.indexOf(item) !== items.length - 1) {
                     menuContainer.appendChild(document.createTextNode(" 🌲 "));
                 }
             });
+            if (isFooter) {
+                loadFooterContent(data);
+            }
         })
         .catch(error => console.error(`Error fetching ${jsonFile}:`, error));
+}
+
+function loadFooterContent(data) {
+    const footerContainer = document.getElementById("footer-links-container");
+    const pageBuiltBy = document.createElement("p");
+    pageBuiltBy.innerHTML = data.pageBuiltByHTML; // Ensure your JSON structure includes this key
+    footerContainer.appendChild(pageBuiltBy);
+    
+    data.validationLinks.forEach(link => {
+        const linkElement = document.createElement("a");
+        linkElement.href = link.url;
+        const image = document.createElement("img");
+        image.src = link.imageSrc;
+        image.alt = link.altText;
+        linkElement.appendChild(image);
+        footerContainer.appendChild(linkElement);
+    });
 }
 
 function updateValidationLinks() {
