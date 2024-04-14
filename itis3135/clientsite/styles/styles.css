@@ -1,0 +1,14 @@
+body{
+    background-color: #D1B1CB;
+    font-family: Arial;
+    text-align: center;
+    margin: 0px auto;
+    font-size: 150%;
+
+}
+main{
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
