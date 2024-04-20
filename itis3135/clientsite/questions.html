@@ -11,12 +11,17 @@
     <header>
         <div data-include="components/header.html"></div>
     </header>
-        <main>
-           
-        </main>
-<footer>
-    <div data-include="components/footer.html"></div> 
-</footer>
-        <script src="scripts/HTMLInclude.js"></script>
+    <main>
+        <!-- Form Section Asking If User Has Any Questions -->
+        <form id="questionForm" method="post">
+            <label for="userQuestion">Do you have any questions? Please ask below:</label><br>
+            <textarea id="userQuestion" name="userQuestion" rows="4" cols="50" placeholder="Type your question here..."></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div> 
+    </footer>
+    <script src="scripts/HTMLInclude.js"></script>
 </body>
-<html>
+</html>
