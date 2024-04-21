@@ -2,5 +2,7 @@
     {"name": "CRAP Website", "url": "stuff/theB&EST Web&Site.htm"},
     {"name": "Client Proposal", "url": "client.html"},
     {"name": "Hobby Site", "url": "hobby/index.html"},
-    {"name": "Client Site", "url": "clientsite/index.html"}
+    {"name": "Client Site", "url": "clientsite/index.html"},
+    {"name": "Review 1", "url": "review1.html"},
+    {"name": "Review 2", "url": "review2.html"}
 ]
