@@ -97,3 +97,6 @@ a{
 nav{
     padding-bottom: 10px;
 }
+ol{
+    text-align: left;
+}
