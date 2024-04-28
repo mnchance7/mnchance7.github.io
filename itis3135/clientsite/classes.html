@@ -5,29 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tracey Knits About</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css' rel='stylesheet' />
     <script src="https://farawayforests.com/cdn/accumulus/accumulus.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js'></script>
+    
+
 </head>
 <body>
     <header>
         <div data-include="components/header.html"></div>
     </header>
     <main>
-        <div id='calendar'></div>
+        <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </main>
 <footer>
     <div data-include="components/footer.html"></div>
 </footer>
 <script src="scripts/HTMLInclude.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth'
-    });
-    calendar.render();
-  });
-</script>
 </body>
 </html>
