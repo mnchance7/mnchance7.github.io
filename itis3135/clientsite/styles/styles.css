@@ -10,6 +10,7 @@ main{
     width: 95%;
     margin: 0 auto;
     max-width: 1200px;
+    
 
 }
 footer nav img{
@@ -21,4 +22,66 @@ a{
     text-decoration: none;
     color: #f9627d;
     font-family: georgia;
+}
+header{
+    color: #f9627d;
+}
+.content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.content-block .text, .content-block .image {
+    flex: 1; /* Each takes up half of the container */
+    padding: 15px;
+}
+
+.content-block.reverse .text {
+    order: 2; /* Reverses the order in flexbox */
+}
+
+.content-block.reverse .image {
+    order: 1;
+}
+
+.image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        flex-direction: column;
+    }
+
+    .content-block.reverse .text, .content-block.reverse .image {
+        order: unset; /* Reset order on smaller screens */
+    }
+}
+.content {
+    position: relative;
+}
+
+.photo-slideshow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px; /* Adjust based on your preference */
+}
+
+.photo-slideshow img {
+    width: 100%;
+    display: none; /* Hide all images initially */
+    border-radius: 10px; /* Rounded corners, adjust radius as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photo-slideshow img:first-child {
+    display: block; /* Show first image initially */
+}
+
+.content p {
+    margin-right: 220px; /* Adjust margin to give space for the slideshow */
 }
