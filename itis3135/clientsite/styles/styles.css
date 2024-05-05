@@ -106,3 +106,11 @@ header{
     transform: scale(1.1); /* Adjust the scale value to control how much the image grows */
     transition: transform 0.3s ease-in-out; /* Smooth transition effect */
 }
+.image img {
+    border-radius: 10px; /* Rounds the corners of the images */
+    transition: transform 0.3s ease-in-out; /* Ensures smooth scaling when hovered */
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image when hovered */
+}
