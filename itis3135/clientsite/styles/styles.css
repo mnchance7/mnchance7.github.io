@@ -123,4 +123,5 @@ nav a {
 nav a:hover {
     color: #555; /* Changes color on hover */
     cursor: pointer; /* Changes cursor to a pointer */
+    transform: scale(1.1);
 }
