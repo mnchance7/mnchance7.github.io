@@ -103,14 +103,24 @@ header{
     }
 }
 .slides:hover {
-    transform: scale(1.1); /* Adjust the scale value to control how much the image grows */
-    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    transform: scale(1.1); 
+    transition: transform 0.3s ease-in-out; 
 }
 .image img {
-    border-radius: 10px; /* Rounds the corners of the images */
-    transition: transform 0.3s ease-in-out; /* Ensures smooth scaling when hovered */
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 .image img:hover {
-    transform: scale(1.05); /* Slightly enlarges the image when hovered */
+    transform: scale(1.05);
+}
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Sets text color */
+    font-weight: bold; /* Makes text bold */
+}
+
+nav a:hover {
+    color: #555; /* Changes color on hover */
+    cursor: pointer; /* Changes cursor to a pointer */
 }
