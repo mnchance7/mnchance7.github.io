@@ -116,7 +116,7 @@ header{
 }
 nav a {
     text-decoration: none; /* Removes underline from links */
-    color: #333; /* Sets text color */
+    color: #f9627d; /* Sets text color */
     font-weight: bold; /* Makes text bold */
 }
 
